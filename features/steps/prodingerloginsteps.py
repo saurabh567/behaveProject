@@ -7,8 +7,7 @@ from selenium.webdriver.common.by import By
 @given('launch the chrome browser')
 def launchBrowser(context):
     context.driver  = webdriver.Chrome(r"C:\Users\Get It Rent\Downloads\Software\chromedriver_win32")
-    context.driver.maximize_window()
-    context.driver.implicitly_wait(10)
+
 @when('open the prodinger page')
 def step_impl(context):
     context.driver.get("https://integration.shop.prodinger.de/customer/account/login/")
@@ -25,10 +24,6 @@ def step_impl(context,user,pwd):
 @then('click on login button')
 def step_impl(context):
     context.driver.find_element(By.XPATH, "(//button[@type='submit'])[1]")
-    context.driver.implicitly_wait(4)
-    message=context.driver.find_element(By.XPATH, "div[data-bind='html: $parent.prepareMessageForHtml(message.text)']").get_text()
-    print(message)
-
 
 #@then('user must successfully login  to the homepage')
 #def step_impl(context):

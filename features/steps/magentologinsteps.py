@@ -12,7 +12,7 @@ def launchBrowser(context):
 
 @when('open the prodinger page')
 def step_impl(context):
-    context.driver.get("https://integration.shop.prodinger.de/customer/account/login/")
+    context.driver.get("https://kumar-saurabh.pixelmechanics-dev.de/")
     context.driver.maximize_window()
 
 

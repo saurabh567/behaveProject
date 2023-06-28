@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/behaveProjects.iml" filepath="$PROJECT_DIR$/.idea/behaveProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Magentoselenium.iml" filepath="$PROJECT_DIR$/.idea/Magentoselenium.iml" />
     </modules>
   </component>
 </project>

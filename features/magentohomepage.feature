@@ -29,3 +29,24 @@ Feature: Magento login
         Then click on the action showcart button
         Then get the title of the page
         Then click here link to continue shopping
+
+        Scenario: search functionality
+        Given launch the chrome browser
+        When open the magento luma page
+        Then click and type "bags"inside the search bar
+
+        Scenario Outline: search functionality with multiple search terms
+          Given launch the chrome browser
+          When open the magento luma page
+          Then enter the multiple "<searchproduct>"
+
+           Examples:
+           |searchproduct|
+           |watches      |
+           |tops         |
+           |bottoms      |
+           |jackets      |
+
+
+
+

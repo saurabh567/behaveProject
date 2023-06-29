@@ -16,12 +16,12 @@ def step_impl(context):
     context.driver.maximize_window()
 
 
-# @then('enter the username "{user}" and password "{pwd}"')
-# def step_impl(context, user, pwd):
-#     context.driver.find_element(By.XPATH, "//input[@id='email']").send_keys(user)
-#     time.sleep(5)
-#     context.driver.find_element(By.XPATH, "//input[@name='login[password]']").send_keys(pwd)
-#     time.sleep(5)
+@then('enter the username "{user}" and password "{pwd}"')
+def step_impl(context, user, pwd):
+    context.driver.find_element(By.XPATH, "//input[@id='email']").send_keys(user)
+    time.sleep(5)
+    context.driver.find_element(By.XPATH, "//input[@name='login[password]']").send_keys(pwd)
+    time.sleep(5)
 
 
 @then('click on signin button of customer account page')

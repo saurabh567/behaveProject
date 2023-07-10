@@ -71,13 +71,13 @@ def searchfunctionality(context):
 
 @then('click on each of the header links to open them in a new tab')
 def step_impl(context):
-    header_links = context.driver.find_elements(By.XPATH,"//li[contains(@class,'level0')]")
-    time.sleep(5)
+    time.sleep(3)
+    header_links = context.driver.find_elements(By.XPATH,"//nav[@class='navigation']/ul/li")
     for header_link in header_links:
         header_link.click()
-        time.sleep(3)
         context.driver.back()
-        time.sleep(10)
+        time.sleep(3)
+
 
 
 @then('click on the About us link')
@@ -192,5 +192,66 @@ def step_impl(context):
 def step_impl(context):
     context.driver.find_element(By.XPATH, "//span[.='Create an Account']").click()
     time.sleep(5)
+
+@then('click on the shop new yoga button')
+def step_impl(context):
+    context.driver.find_element(By.XPATH, "//span[.='Shop New Yoga']").click()
+    time.sleep(5)
+
+
+@then('get the page title heading')
+def step_impl(context):
+    text_content = context.driver.find_element(By.XPATH, "//span[.='New Luma Yoga Collection']").click()
+    print(text_content)
+    context.driver.back()
+    time.sleep(7)
+
+
+@then('click on the shop pants link')
+def step_impl(context):
+    text_content1 = context.driver.find_element(By.XPATH, "//span[.='Shop Pants']").click()
+    print(text_content1)
+    context.driver.back()
+    time.sleep(10)
+
+
+@then('click on the shop tees link')
+def step_impl(context):
+    text_content2 = context.driver.find_element(By.XPATH, "//span[@class='image']//img").click()
+    print(text_content2)
+    context.driver.back()
+    time.sleep(3)
+
+
+@then('click on the shop erin recommends link')
+def step_impl(context):
+    text_content3 = context.driver.find_element(By.XPATH, "//span[.='Shop Erin Recommends']").click()
+    print(text_content3)
+    context.driver.back()
+    time.sleep(3)
+
+
+@then('click on the shop performance link')
+def step_impl(context):
+    text_content5 = context.driver.find_element(By.XPATH, "//span[.='Shop Performance']").click()
+    print(text_content5)
+    context.driver.back()
+    time.sleep(3)
+
+
+@then('click on the shop eco friendly')
+def step_impl(context):
+    text_content6 = context.driver.find_element(By.XPATH, "//span[.='Shop Eco-Friendly']").click()
+    print(text_content6)
+    context.driver.back()
+    time.sleep(3)
+
+
+
+
+
+
+
+
 
 
